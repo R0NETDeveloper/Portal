@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Register Partner Ginkgosoft</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div id="mysticky-wrap">
+        <div id="mysticky-nav" style="top: -60px;">
+            <header class="minimal-header effect-two clr" id="site-header" itemtype="http://schema.org/WPHeader"
+                itemscope="itemscope" data-height="60">
+                <div class="clr container" id="site-header-inner">
+                    <div class="clr" id="site-logo" itemtype="http://schema.org/Brand" itemscope="">
+                        <div class="clr" id="site-logo-inner">
+                            <a class="custom-logo-link" href="https://ginkgosoft.co.th/" rel="home"><img width="200"
+                                    height="45" class="custom-logo" alt="ginkgosoft"
+                                    src="https://ginkgosoft.co.th/wp-content/uploads/2018/10/gg_logo.png"
+                                    srcset="https://ginkgosoft.co.th/wp-content/uploads/2018/10/gg_logo.png 1x, https://ginkgosoft.co.th/wp-content/uploads/2018/10/gg_logo.png 2x"></a>
+                        </div><!-- #site-logo-inner -->
+                    </div><!-- #site-logo -->
+                </div><!-- #site-header-inner -->
+            </header>
+        </div>
+    </div>
+    <div class="page-wrapper bg-gra-02 p-t-100 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Registration Form</h2>
+                    <form id="PartnerForm" method="POST">
+
+
+
+                        <div class="input-group">
+                            <label class="label">*Type</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="type_name" name="type_name" required onchange="typeBtn()">
+                                    <option selected="selected" value="Individual">Individual</option>
+                                    <option>Legal entity</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+
+                        <div id="input-1" class="row row-space">
+                            <div id="input-1.1" class="col-2">
+                                <div class="input-group">
+                                    <label id="labelFirstname" class="label">*first name</label>
+                                    <input class="input--style-4" type="text" id="first_name" name="first_name" required
+                                        pattern="^[a-zA-Z\s]+$">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label id="labelLastname" class="label">*last name</label>
+                                    <input class="input--style-4" type="text" id="last_name" name="last_name" required
+                                        pattern="^[a-zA-Z\s]+$">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label id=labelBirthday class="label">*Birthday</label>
+                                    <div id=input-2.1 class="input-group-icon">
+                                        <input id="birthday" class="input--style-4 js-datepicker" type="text"
+                                            name="birthday" required>
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label id=labelGender class="label">*Gender</label>
+                                    <div id=input-2.2 class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input id=radio1 type="radio" name="gender" value="male" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input id=radio2 type="radio" name="gender" value="female" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label id="labelIDCard" class="label">*IDCard</label>
+                            <div class="input-group">
+                                <input class="input--style-4" type="text" id="id_card" name="id_card" required
+                                    pattern="[0-9]{13}" placeholder="13 Digit">
+                            </div>
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">*Email</label>
+                                    <input class="input--style-4" type="email" id="email" name="email" required
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="YourEmail">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">*Phone Number</label>
+                                    <input class="input--style-4" type="text" id="phone" name="phone" required
+                                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">*Subject</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select id="subject" name="subject" required>
+                                    <option disabled="disabled" selected="selected" value="">Choose option </option>
+                                    <option>ECM</option>
+                                    <option>ZDox</option>
+                                    <option>Get Invoice</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit"> Submit </button>
+
+                            <div class='message'>
+                                <div class='check'>
+                                    &#10004;
+                                </div>
+                                <p>
+                                    ลงทะเบียนเสร็จเรียบร้อย
+                                </p>
+                                <p>
+                                    โปรดรอการติดต่อกลับในภายหลัง!
+
+                                </p>
+                                <button id='ok' type="button" onclick="mainGinkgo()"> OK </button>
+
+                            </div>
+
+                            <div class='messageFail'>
+                                <div class='close'>
+                                    &#10005;
+                                </div>
+                                <p>
+                                    ระบบขัดของ
+                                </p>
+                                <p>
+                                    โปรดลองใหม่อีกครั้ง!
+
+                                </p>
+                                <button id='ok' type="reset" value="Reset" onclick="HiddenPopUp(500)"> OK </button>
+
+
+                            </div>
+
+                        </div>
+
+                        <style>
+                            body,
+                            html {
+                                height: 100%;
+                                font-size: 20px;
+                                font-family: Source Sans Pro;
+                            }
+
+                            #go {
+                                position: absolute;
+                                top: 30px;
+                                left: 50%;
+                                transform: translate(-50%, 0%);
+                                color: white;
+                                border: 0;
+                                background: #71c341;
+                                width: 100px;
+                                height: 30px;
+                                border-radius: 6px;
+                                font-size: 1rem;
+                                transition: background 0.2s ease;
+                                outline: none;
+                            }
+
+                            #go:hover {
+                                background: #8ecf68;
+                            }
+
+                            #go:active {
+                                background: #5a9f32;
+                            }
+
+                            .message {
+                                position: absolute;
+                                top: -200px;
+                                left: 50%;
+                                transform: translate(-50%, 0%);
+                                width: 500px;
+                                background: white;
+                                border-radius: 8px;
+                                padding: 30px;
+                                text-align: center;
+                                font-weight: 500;
+                                color: #2c2928;
+                                opacity: 0;
+                                transition: top 0.3s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.2s ease-in-out;
+                            }
+
+                            .messageFail {
+                                position: absolute;
+                                top: -200px;
+                                left: 50%;
+                                transform: translate(-50%, 0%);
+                                width: 500px;
+                                background: white;
+                                border-radius: 8px;
+                                padding: 30px;
+                                text-align: center;
+                                font-weight: 500;
+                                color: #2c2928;
+                                opacity: 0;
+                                transition: top 0.3s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.2s ease-in-out;
+                            }
+
+
+                            .message .check {
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale(4);
+                                width: 120px;
+                                height: 110px;
+                                background: #71c341;
+                                color: white;
+                                font-size: 3.8rem;
+                                padding-top: 10px;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: transform 0.2s 0.25s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.1s 0.25s ease-in-out;
+                            }
+
+                            .messageFail .close {
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translate(-50%, -50%) scale(4);
+                                width: 120px;
+                                height: 110px;
+                                background: #ED0E0E;
+                                color: white;
+                                font-size: 3.8rem;
+                                padding-top: 10px;
+                                border-radius: 50%;
+                                opacity: 0;
+                                transition: transform 0.2s 0.25s cubic-bezier(0.31, 0.25, 0.5, 1.5), opacity 0.1s 0.25s ease-in-out;
+                            }
+
+                            .message .scaledown {
+                                transform: translate(-50%, -50%) scale(1);
+                                opacity: 1;
+                            }
+
+                            .messageFail .scaledown {
+                                transform: translate(-50%, -50%) scale(1);
+                                opacity: 1;
+                            }
+
+                            .message p {
+                                font-size: 1.1rem;
+                                margin: 25px 0px;
+                                padding: 0;
+                            }
+
+                            .message p:nth-child(2) {
+                                font-size: 2.3rem;
+                                margin: 40px 0px 0px 0px;
+                            }
+
+                            .messageFail p {
+                                font-size: 1.1rem;
+                                margin: 25px 0px;
+                                padding: 0;
+                            }
+
+                            .messageFail p:nth-child(2) {
+                                font-size: 2.3rem;
+                                margin: 40px 0px 0px 0px;
+                            }
+
+                            .message #ok {
+                                position: relative;
+                                color: white;
+                                border: 0;
+                                background: #71c341;
+                                width: 100%;
+                                height: 50px;
+                                border-radius: 6px;
+                                font-size: 1.2rem;
+                                transition: background 0.2s ease;
+                                outline: none;
+                            }
+
+                            .messageFail #ok {
+                                position: relative;
+                                color: white;
+                                border: 0;
+                                background: #ED0E0E;
+                                width: 100%;
+                                height: 50px;
+                                border-radius: 6px;
+                                font-size: 1.2rem;
+                                transition: background 0.2s ease;
+                                outline: none;
+                            }
+
+                            .message #ok:hover {
+                                background: #8ecf68;
+                            }
+
+                            .message #ok:active {
+                                background: #5a9f32;
+                            }
+
+                            .messageFail #ok:hover {
+                                background: #ED0E0E;
+                            }
+
+                            .messageFail #ok:active {
+                                background: #ED0E0E;
+                            }
+
+                            .comein {
+                                top: 150px;
+                                opacity: 1;
+                            }
+                        </style>
+
+
+                        <script>
+
+
+                            document.getElementById("PartnerForm").addEventListener("submit", sForm);
+                            document.getElementById("PartnerForm").addEventListener("submit", handleForm);
+
+
+                            function typeBtn() {
+
+                                // Section for Hidden field & label
+
+                                var catValue = $('#type_name>option:selected').text();
+
+                                if (catValue.match("Legal entity")) {
+
+                                    document.getElementById("input-1").className = "input-group";
+                                    document.getElementById("input-1.1").className = "input-group";
+
+                                    document.getElementById("input-2.1").hidden = true;
+                                    document.getElementById("input-2.2").hidden = true;
+                                    document.getElementById("birthday").required = false;
+                                    document.getElementById("birthday").value = "";
+                                    document.getElementById("radio1").required = false;
+                                    document.getElementById("radio2").required = false;
+
+                                    document.getElementById("labelBirthday").innerHTML = "";
+                                    document.getElementById("labelGender").innerHTML = "";
+
+
+
+                                    document.getElementById("labelIDCard").innerHTML = "*Tax Number";
+                                    document.getElementById("last_name").type = "hidden";
+                                    document.getElementById("last_name").required = false;
+                                    document.getElementById("last_name").value = "";
+                                    document.getElementById("labelLastname").innerHTML = "";
+                                    document.getElementById("labelFirstname").innerHTML = "*Company Name";
+
+
+
+
+                                }
+
+                                if (catValue.match("Individual")) {
+                                    document.getElementById("input-1").className = "row row-space";
+                                    document.getElementById("input-1.1").className = "col-2";
+
+                                    document.getElementById("input-2.1").hidden = false;
+                                    document.getElementById("input-2.2").hidden = false;
+                                    document.getElementById("birthday").required = true;
+                                    document.getElementById("radio1").required = true;
+                                    document.getElementById("radio2").required = true;
+                                    document.getElementById("labelBirthday").innerHTML = "*Birthday";
+                                    document.getElementById("labelGender").innerHTML = "*Gender";
+
+                                    document.getElementById("labelIDCard").innerHTML = "*IDCard";
+                                    document.getElementById("last_name").type = "text"
+                                    document.getElementById("last_name").disable = false;
+                                    document.getElementById("labelLastname").innerHTML = "*Last Name";
+                                    document.getElementById("labelFirstname").innerHTML = "*First Name";
+                                }
+
+
+                            }
+
+
+                            function handleForm(event) {
+                                //Hold Data in Form not Refresh
+                                event.preventDefault();
+                            }
+
+                            function popUpSuccess(nr, flag) {
+                                if (flag) {
+                                    //popUpSuccess
+                                    $('.message').toggleClass('comein');
+                                    $('.check').toggleClass('scaledown');
+
+
+                                } else {
+                                    //popUpError
+                                    $('.messageFail').toggleClass('comein');
+                                    $('.close').toggleClass('scaledown');
+                                }
+                            }
+                            function HiddenPopUp(nr) {
+
+                                $('.messageFail').toggleClass('comein');
+                                $('.close').toggleClass('scaledown');
+                                $('#go').fadeToggle(nr);
+                            }
+
+
+                            function mainGinkgo() {
+                                location.href = 'https://ginkgosoft.co.th/';
+                            }
+                            function sForm() {
+
+
+                                //Set Value radio 
+                                var catValue = $('#type_name>option:selected').text();
+                                var genderValue = "";
+                                if (catValue.match("Individual")) {
+                                    genderValue = $("#PartnerForm input[type='radio']:checked").val();
+                                }
+                                //POST Data in HTML to Flow Microsoft Sharepoint
+
+                                $.ajax({
+                                    type: "POST",
+                                    url: "https://prod-08.southeastasia.logic.azure.com:443/workflows/cc27086d2446477c895d65a414773a5b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=zACcckvV5dHhOefqzUQf4iPLUBvWF3k80RVDn9jg5LU",
+                                    data: JSON.stringify({
+                                        type_name: $("#type_name").val(),
+                                        first_name: $("#first_name").val(),
+                                        last_name: $("#last_name").val(),
+                                        birthday: $("#birthday").val(),
+                                        email: $("#email").val(),
+                                        id_card: $("#id_card").val(),
+                                        phone: $("#phone").val(),
+                                        subject: $("#subject").val(),
+                                        gender: genderValue,
+                                        //gender: $("#PartnerForm input[type='radio']:checked").val(),
+                                    }),
+                                    //dataType: "json",
+                                    dataType: 'text',
+                                    contentType: "application/json",
+                                    success: function (data) {
+
+                                        popUpSuccess(500, true);
+                                        console.log("Success");
+                                        console.log(data);
+                                        //location.href='https://ginkgosoft.co.th/';
+
+                                    },
+                                    error: function (data) {
+                                        //alert("ระบบขัดข้องโปรดลองใหม่อีกครั้ง.");
+                                        popUpSuccess(500, false);
+                                        console.log("Error");
+                                        console.log(data);
+
+                                    },
+
+                                });
+
+                            }
+                        </script>
+                    </form>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="myModal" class="modal"></div> -->
+
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <!--Add JS   -->
+
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+
+</html>
+
+
+<!-- end document-->
